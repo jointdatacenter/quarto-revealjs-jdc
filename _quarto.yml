@@ -2,4 +2,3 @@ execute:
   freeze: auto
 project:
   type: default
-  output-dir: docs
