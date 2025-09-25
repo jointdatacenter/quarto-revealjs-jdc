@@ -9,7 +9,7 @@ A [Quarto](https://quarto.org/) extension to create [UNHCR branded](https://www.
 To start a new presentation:
 
 ```bash
-quarto use template unhcr-dataviz/quarto-revealjs-unhcr
+quarto use template jointdatacenter/quarto-revealjs-jdc
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your presentation.
