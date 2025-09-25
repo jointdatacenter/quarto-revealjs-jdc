@@ -206,8 +206,15 @@ library(unhcrthemes)
 #| label: idp-plot
 #| fig-align: center
 
-library(tidyverse)
-library(unhcrthemes)
+if (!require("tidyverse", quietly = TRUE)) {
+  install.packages("tidyverse")
+  library(tidyverse)
+}
+
+if (!require("unhcrthemes", quietly = TRUE)) {
+  install.packages("unhcrthemes")
+  library(unhcrthemes)
+}
 
 dplyr::count(mpg, class) |>
   dplyr::arrange(n) |>
@@ -255,8 +262,15 @@ gt::gt(head(mtcars))
 ::: {.column width="50%"}
 
 ```{r}
-#| label: gt-ex
+#| label: gt-table
 #| eval: true
+
+if (!require("gt", quietly = TRUE)) {
+  install.packages("gt")
+  library(gt)
+}
+
+gt::gt(head(mtcars))
 ```
 
 :::
