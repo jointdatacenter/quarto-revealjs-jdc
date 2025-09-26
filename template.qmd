@@ -19,9 +19,7 @@ To learn more about Quarto presentations see <https://quarto.org/docs/presentati
 - YAML arguments define the content of the title slide.
 - Add arguments as needed
 
-```{yaml}
-#| echo: true
-#| eval: false
+```yaml
 
 ---
 title: UNHCR Quarto Theme
@@ -38,9 +36,7 @@ format: unhcr-revealjs
 
 - Each slide starts with a level 2 heading (`## Slide 1`). For example:
 
-```{markdown}
-#| echo: true
-#| eval: false
+```{.markdown}
 
 ## Slide 1
 
@@ -55,9 +51,7 @@ Some content for slide 2
 
 - A section starts with a level 1 heading (`# Section 1`). For example:
 
-```{markdown}
-#| echo: true
-#| eval: false
+```{.markdown}
 
 # Section 1
 
@@ -77,9 +71,7 @@ Add `{.slide-blue}` class to make it UNHCR blue
 - To add bullet points to a slide, use the Markdown list syntax.
 - Works the same way with numbered lists. For example:
 
-```{markdown}
-#| echo: true
-#| eval: false
+```{.markdown}
 
 - Item 1
     - Item 1.1
@@ -95,9 +87,7 @@ Add `{.slide-blue}` class to make it UNHCR blue
 - By default the lists are **not** incremental.
 - Add the `{.incremental}` class, so each bullet will appear separately.
 
-```{markdown}
-#| echo: true
-#| eval: false
+```{.markdown}
 
 ::: {.incremental}
 - Item 1
@@ -119,9 +109,7 @@ Include `incremental:true` in the YAML to set it globally.
 - Use `. . .` to separate content and turn it incremental.
 - Any content can be incremental. For example:
 
-```{markdown}
-#| echo: true
-#| eval: false
+```{.markdown}
 
 This will appear first
 
@@ -152,7 +140,7 @@ For dark background slides use `{.text-yellow}` and `{.bg-yellow}` classes
 
 - To create columns, use a `div` container with class `{.columns}`, containing two or more `div` containers with class `{.column}` and a `width` attribute. For example:
 
-```{markdown}
+```{.markdown}
 #| echo: true
 
 :::: {.columns}
@@ -172,7 +160,7 @@ Right column
 
 - To insert an image, use the Markdown image syntax. For example:
 
-```{markdown}
+```{.markdown}
 #| echo: true
 ![](path/to/image.jpg)
 ```
@@ -184,7 +172,7 @@ Right column
 - To include code, use fenced code blocks with a language specifier. 
 - By default the `echo` parameter of code block is set to `false`, turn it to `true` to see the code and the result.
 
-```{markdown}
+```{.markdown}
 #| echo: true
 
 \```{r}
@@ -281,7 +269,7 @@ gt::gt(head(mtcars))
 - You can add speaker notes to your slides that are only visible to the presenter during the presentation.
 - To add speaker notes, use the following syntax:
 
-```{markdown}
+```{.markdown}
 #| echo: true
 
 ## Slide with speaker notes

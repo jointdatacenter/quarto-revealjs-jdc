@@ -22,9 +22,15 @@ jobs:
         with:
           r-version: '4.2.0'
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+
       - name: Install R packages
         run: |
-          install.packages(c("knitr", "rmarkdown"))
+          install.packages(c("knitr", "rmarkdown", "tidyverse", "remotes"))
+          remotes::install_github("vidonne/unhcrthemes")
         shell: Rscript {0}
 
       - name: Render and Publish

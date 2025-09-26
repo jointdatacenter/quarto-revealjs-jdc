@@ -1,4 +1,4 @@
-# UNHCR Quarto Reveal.js template
+# JDC Quarto Reveal.js template
 
 A [Quarto](https://quarto.org/) extension to create [UNHCR branded](https://www.unhcr.org/brand) `reveal.js` presentations.
 
