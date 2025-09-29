@@ -1,4 +1,14 @@
 execute:
   freeze: auto
+
 project:
   type: default
+
+# Enable brand integration across the project
+brand: "_brand.yml"
+
+# Default format configuration
+format:
+  jdc-revealjs:
+    # Brand integration will automatically apply colors, fonts, and logos
+    embed-resources: true
