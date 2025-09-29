@@ -1,18 +1,16 @@
 # JDC Quarto Reveal.js template
 
-A [Quarto](https://quarto.org/) extension to create [UNHCR branded](https://www.unhcr.org/brand) `reveal.js` presentations.
-
-![Screenshot of the UNHCR title slide for reveal.js presentation.](template.png)
+A [Quarto](https://quarto.org/) extension for branded presentations.
 
 ## Installing
 
 To start a new presentation:
 
-```bash
+```bashs
 quarto use template jointdatacenter/quarto-revealjs-jdc
 ```
 
-This will install the extension and create an example qmd file that you can use as a starting place for your presentation.
+This will install the extension and create an example qmd file that you can use as a starting place.
 
 ## Documentation
 
@@ -20,4 +18,4 @@ Read the [Quarto documentation on reveal.js format](https://quarto.org/docs/pres
 
 ## Example
 
-Here is the [source code](template.qmd) and the [live example](https://unhcr-dataviz.github.io/quarto-revealjs-unhcr/#/title-slide) of the [template.qmd](template.qmd) file.
+Here is the [source code](template.qmd) and the [live example](https://unhcr-dataviz.github.io/quarto-revealjs-unhcr/#/title-slide) of the [slides.qmd](slides.qmd) file.

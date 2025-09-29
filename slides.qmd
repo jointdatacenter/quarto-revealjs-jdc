@@ -1,5 +1,5 @@
 ---
-title: UNHCR Quarto Theme
+title: JDC Quarto Theme
 subtitle: For revealjs
 format: unhcr-revealjs
 embed-resources: true
@@ -9,7 +9,7 @@ embed-resources: true
 
 - Quarto integrates with Reveal.js to create stunning slideshows.
 - Markdown syntax is used to structure and format content.
-- Craft a finished **UNHCR branded** presentation with this template.
+- Craft a finished branded presentation with this template.
 - Seamlessly weave together content and executable code.
 
 To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
@@ -22,17 +22,26 @@ To learn more about Quarto presentations see <https://quarto.org/docs/presentati
 ```yaml
 
 ---
-title: UNHCR Quarto Theme
+title: JDC Quarto Theme
 subtitle: For revealjs
-author: Cedric Vidonne
-institute: IPDA
-date: last-modified
-format: unhcr-revealjs
+author: Author
 ---
 
 ```
+# Content
 
-## Basic slides
+## Section
+
+A section starts with a level 1 heading (`# Section 1`). For example:
+
+```{.markdown}
+
+## Section example
+
+Some content for section 1
+```
+
+## Slides
 
 - Each slide starts with a level 2 heading (`## Slide 1`). For example:
 
@@ -47,20 +56,6 @@ Some content for slide 1
 Some content for slide 2
 ```
 
-## Section slides
-
-- A section starts with a level 1 heading (`# Section 1`). For example:
-
-```{.markdown}
-
-# Section 1
-
-Some content for section 1
-```
-
-# Section
-
-Example of a section slide
 
 # UNHCR section {.slide-blue}
 
@@ -165,12 +160,15 @@ Right column
 ![](path/to/image.jpg)
 ```
 
-![](https://raw.githubusercontent.com/vidonne/unhcrdown/master/inst/resources/img/cover-example.jpg)
+![](https://www.jointdatacenter.org/wp-content/uploads/2025/02/RF1359773_20240620_ssd_HC-at-Jamjang-46-scaled.jpg)
 
-## Code
+# Code
 
-- To include code, use fenced code blocks with a language specifier. 
-- By default the `echo` parameter of code block is set to `false`, turn it to `true` to see the code and the result.
+## Seamlessly integratation
+
+To include code, use fenced code blocks with a language specifier (e.g. R or Python). 
+
+By default the `echo` parameter of code block is set to `false`, turn it to `true` to see the code and the result.
 
 ```{.markdown}
 #| echo: true
@@ -184,11 +182,9 @@ library(unhcrthemes)
 
 ```
 
-
-
 ## Plots
 
-- Use the [`{unhcrthemes}`](https://vidonne.github.io/unhcrthemes/) package to produce UNHCR branded plots directly in the presentation. For example: 
+Use the [`{unhcrthemes}`](https://vidonne.github.io/unhcrthemes/) package to produce branded plots directly in the presentation.
 
 ```{r}
 #| label: idp-plot
@@ -282,14 +278,9 @@ Speaker notes go here.
 
 ```
 
-## Exporting into PDF
 
-- Toggle into Print View using the `E` key (or using the [Navigation Menu](https://quarto.org/docs/presentations/revealjs/presenting.html#navigation-menu)).
-- Open the in-browser print dialog (CTRL/CMD+P).
-- Change the destination setting to **Save as PDF**.
-- Find more info on the print to PDF settings [here](https://quarto.org/docs/presentations/revealjs/presenting.html#print-to-pdf).
 
-## More Information
+## More mnformation
 
 You can learn more about controlling the appearance and layout of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
 
