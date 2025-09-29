@@ -37,8 +37,8 @@ color:
 logo:
   # Primary JDC horizontal logo
   medium: "_extensions/jdc/jdc_logo_horizontal.svg"
-  # Alternative UNHCR logo if needed
-  small: "_extensions/jdc/unhcr-logo.svg"
+  # Alternative JDC logo
+  small: "imgs/JDC-logo-horizontal-CMYK.png"
 
 typography:
   # Google Fonts integration
