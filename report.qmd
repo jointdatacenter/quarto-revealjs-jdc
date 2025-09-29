@@ -10,16 +10,6 @@ format:
     toc-location: left
     code-fold: true
     embed-resources: true
-  pdf:
-    documentclass: article
-    geometry:
-      - margin=1in
-    include-in-header:
-      text: |
-        \usepackage{fancyhdr}
-        \pagestyle{fancy}
-        \fancyhead[L]{\includegraphics[width=2cm]{imgs/JDC-logo-horizontal-CMYK.png}}
-        \fancyhead[R]{JDC Document}
   docx:
     toc: true
     number-sections: true
