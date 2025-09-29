@@ -17,6 +17,7 @@ To learn more about Quarto presentations see <https://quarto.org/docs/presentati
 ## Presentation title
 
 - YAML arguments define the content of the title slide.
+
 - Add arguments as needed
 
 ```yaml
@@ -57,9 +58,9 @@ Some content for slide 2
 ```
 
 
-# Blue ection {.slide-blue}
+# UNHCR section {.slide-blue}
 
-Add `{.slide-blue}` class to make it blue
+Add `{.slide-blue}` class to make it UNHCR blue
 
 ## Lists
 
@@ -113,11 +114,11 @@ This will appear first
 And then that!
 ```
 
-## Helpers
+## UNHCR helpers
 
 **Text**
 
-- Use `{.text-blue}` to apply [blue]{.text-blue} color
+- Use `{.text-blue}` to apply [UNHCR blue]{.text-blue} color
 - Use `{.text-grey}` for [lighter text]{.text-grey} color
 
 **Background**
@@ -162,6 +163,104 @@ Right column
 
 ![](https://www.jointdatacenter.org/wp-content/uploads/2025/02/RF1359773_20240620_ssd_HC-at-Jamjang-46-scaled.jpg)
 
+# Code
+
+## Seamlessly integratation
+
+To include code, use fenced code blocks with a language specifier (e.g. R or Python). 
+
+By default the `echo` parameter of code block is set to `false`, turn it to `true` to see the code and the result.
+
+```{.markdown}
+#| echo: true
+
+\```{r}
+#| echo: true
+#| warning: false
+library(tidyverse)
+library(unhcrthemes)
+\```
+
+```
+
+## Plots
+
+Use the [`{unhcrthemes}`](https://vidonne.github.io/unhcrthemes/) package to produce branded plots directly in the presentation.
+
+```{r}
+#| label: idp-plot
+#| fig-align: center
+
+if (!require("tidyverse", quietly = TRUE)) {
+  install.packages("tidyverse")
+  library(tidyverse)
+}
+
+if (!require("unhcrthemes", quietly = TRUE)) {
+  install.packages("unhcrthemes")
+  library(unhcrthemes)
+}
+
+dplyr::count(mpg, class) |>
+  dplyr::arrange(n) |>
+  dplyr::mutate(class = factor(class, levels = class)) |>
+  ggplot(aes(n, class)) +
+  geom_col(fill = unhcr_pal(n = 1, "pal_blue")) +
+  geom_text(aes(label = n), hjust = 0, nudge_x = 1) +
+  labs(
+    title = "Simple bar chart with labels using ggplot",
+    subtitle = "This plot shows the default style of theme_unhcr()",
+    caption = "Source: mtcars"
+  ) +
+  scale_x_continuous(expand = expansion(c(0, 0.1))) +
+  theme_unhcr(grid = FALSE, axis = "y", axis_title = FALSE, axis_text = "y")
+```
+
+## Tables
+
+- Use `knitr::kable()` function for simple table. For example:
+
+```{r}
+#| label: kable-ex
+#| echo: false
+#| eval: true
+knitr::kable(head(select(mtcars, mpg, cyl, disp), n = 3)) 
+```
+
+## More tables
+
+- Many packages can help you stylize tables, like `{gt}`, `{dt}` and more.
+- Use them to customize further the table design in your presentations.
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+#| label: gt-ex
+#| echo: true
+#| eval: false
+gt::gt(head(mtcars)) 
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: gt-table
+#| eval: true
+
+if (!require("gt", quietly = TRUE)) {
+  install.packages("gt")
+  library(gt)
+}
+
+gt::gt(head(mtcars))
+```
+
+:::
+:::
+
 ## Speaker Notes:
 
 - You can add speaker notes to your slides that are only visible to the presenter during the presentation.
@@ -180,7 +279,9 @@ Speaker notes go here.
 
 ```
 
-## More information
+
+
+## More mnformation
 
 You can learn more about controlling the appearance and layout of RevealJS output here: <https://quarto.org/docs/presentations/revealjs/>
 
