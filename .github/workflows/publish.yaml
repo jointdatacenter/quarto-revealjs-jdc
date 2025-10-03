@@ -22,15 +22,6 @@ jobs:
         with:
           target: gh-pages
           path: slides.qmd
-
-      - name: Install TinyTeX (PDF)
-        run: quarto install tinytex
-
-      - name: Render and Publish (PDF)
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-          path: report.qmd
-
+          
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
