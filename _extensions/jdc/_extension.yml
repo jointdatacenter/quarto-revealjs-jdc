@@ -2,15 +2,14 @@ title: JDC Presentation Template
 author: JDC
 version: 1.0.0
 quarto-required: ">=1.5.0"
+resources:
+  - background.png
 contributes:
   formats:
     revealjs:
       # Theme integrates with Quarto brand system
       theme: [default, revealjs.scss]
-
-      # Logo will be managed by brand system
-      logo: jdc_logo_horizontal.svg
-
+      logo: jdc_logo_horizontal_white.png
       # Title slide background - will be overridden by brand colors
       title-slide-attributes:
         data-background-color: "#0072bc"  # Fallback for JDC blue
@@ -25,6 +24,3 @@ contributes:
       multiplex: false
       controls: true
       navigation-mode: vertical
-
-      # Integration with Quarto brand system
-      brand: true  # Enable brand integration

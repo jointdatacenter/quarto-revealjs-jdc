@@ -1,37 +1,7 @@
 /*-- scss:defaults --*/
 
-// JDC Brand Colors - values from _brand.yml
-// These will be overridden by the brand system when available
-$jdc-blue: #0072bc !default;
-$jdc-navy: #18375f !default;
-$jdc-green: #00b398 !default;
-$jdc-grey: #666666 !default;
-$jdc-red: #ef4a60 !default;
-$jdc-yellow: #faeb00 !default;
-$jdc-dark: #222222 !default;
-$jdc-light: #ffffff !default;
-
-// Brand typography - will be set by the brand system
-$font-family-sans-serif: "Lato", sans-serif !default;
-$font-family-monospace: "Source Code Pro", monospace !default;
-
-// Color mappings using brand variables
-$body-bg: $jdc-light !default;
-$body-color: $jdc-dark !default;
-$text-muted: $jdc-grey !default;
-$link-color: $jdc-blue !default;
-$link-color-hover: $jdc-blue !default;
-$light-bg-link-color: $jdc-blue !default;
-$dark-bg-link-color: $jdc-yellow !default;
-$code-color: $jdc-red !default;
-$light-bg-code-color: $jdc-red !default;
-$dark-bg-code-color: lighten($jdc-red, 15%) !default;
-
 // Layout settings
 $border-radius: 0 !default;
-
-// Headings
-$presentation-heading-color: $jdc-blue !default;
 $presentation-h1-font-size: 2.2em !default;
 
 /*-- scss:rules --*/
@@ -43,7 +13,7 @@ $presentation-h1-font-size: 2.2em !default;
 
 // Footer styling
 .reveal .footer {
-  border-top: lighten($jdc-dark, 70) solid 2px;
+  border-top: lighten($brand-dark, 70) solid 2px;
   height: 3.5rem;
 
   p {
@@ -53,8 +23,8 @@ $presentation-h1-font-size: 2.2em !default;
 
 .has-dark-background {
   .footer {
-    border-top-color: $jdc-light;
-    color: $jdc-light;
+    border-top-color: $brand-light;
+    color: $brand-light;
   }
 }
 
@@ -69,7 +39,7 @@ $presentation-h1-font-size: 2.2em !default;
 
 // Title slide styling
 #title-slide {
-  color: $jdc-yellow;
+  color: $brand-yellow;
 
   .subtitle {
     font-size: 1.3em;
@@ -83,7 +53,7 @@ $presentation-h1-font-size: 2.2em !default;
 
 .has-dark-background .title-slide {
   p {
-    color: $jdc-yellow;
+    color: $brand-yellow;
   }
 }
 
@@ -100,14 +70,14 @@ $presentation-h1-font-size: 2.2em !default;
   // List markers in brand blue
   ul li::marker,
   ol li::marker {
-    color: $jdc-blue;
+    color: $brand-blue;
   }
 
   // Blockquotes
   blockquote {
-    color: $jdc-dark;
+    color: $brand-dark;
     font-style: italic;
-    border-left-color: $jdc-blue;
+    border-left-color: $brand-blue;
   }
 
   // Code block spacing
@@ -124,39 +94,39 @@ $presentation-h1-font-size: 2.2em !default;
   h4,
   h5,
   h6 {
-    color: $jdc-yellow;
+    color: $brand-yellow;
   }
 
   // List markers in yellow for dark backgrounds
   ul li::marker,
   ol li::marker {
-    color: $jdc-yellow;
+    color: $brand-yellow;
   }
 
   // Blockquotes for dark backgrounds
   blockquote {
-    color: $jdc-light;
-    border-left-color: $jdc-yellow;
+    color: $brand-light;
+    border-left-color: $brand-yellow;
   }
 
   // Callout titles
   .callout-title p {
-    color: $jdc-dark;
+    color: $brand-dark;
   }
 }
 
 // JDC brand helper classes
 // Text color utilities
 .text-blue {
-  color: $jdc-blue;
+  color: $brand-blue;
 }
 
 .text-yellow {
-  color: $jdc-yellow;
+  color: $brand-yellow;
 }
 
 .text-grey {
-  color: $jdc-grey;
+  color: $brand-grey;
 }
 
 // Background color utilities
@@ -165,22 +135,31 @@ $presentation-h1-font-size: 2.2em !default;
 .bg-grey {
   padding: 0.05em 0.1em;
   display: inline-block;
-  color: $jdc-dark;
+  color: $brand-dark;
 }
 
 .bg-blue {
-  background-color: lighten($jdc-blue, 45%);
+  background-color: lighten($brand-blue, 45%);
 }
 
 .bg-yellow {
-  background-color: lighten($jdc-yellow, 30%);
+  background-color: lighten($brand-yellow, 30%);
 }
 
 .bg-grey {
-  background-color: lighten($jdc-grey, 45%);
+  background-color: lighten($brand-grey, 45%);
 }
 
 // Slide background color utility
 .slide-blue {
-  background-color: $jdc-blue !important;
+  background-color: $brand-blue !important;
+}
+
+// Slide with background image
+.jdc-background .slide-background-content {
+  background-image: url('../../../../../_extensions/jdc/background.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  opacity: 0.2 !important;
 }

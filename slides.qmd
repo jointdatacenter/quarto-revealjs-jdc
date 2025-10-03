@@ -1,6 +1,6 @@
 ---
 title: JDC Quarto Theme
-subtitle: For revealjs
+subtitle: For Quarto/Revealjs
 format: jdc-revealjs
 embed-resources: true
 ---
@@ -13,6 +13,12 @@ embed-resources: true
 - Seamlessly weave together content and executable code.
 
 To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Your Slide Title {.jdc-background}
+
+
+Your content here
+
 
 ## Presentation title
 

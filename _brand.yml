@@ -5,40 +5,40 @@ color:
   # Core brand palette based on JDC/UNHCR colors
   palette:
     # Primary brand colors
-    jdc-blue: "#0072bc"
-    jdc-navy: "#18375f"
-    jdc-green: "#00b398"
-    jdc-red: "#ef4a60"
-    jdc-yellow: "#faeb00"
+    blue: "#0072bc"
+    navy: "#18375f"
+    green: "#00b398"
+    red: "#ef4a60"
+    yellow: "#faeb00"
 
     # Neutral colors
-    jdc-grey: "#666666"
-    jdc-dark: "#222222"
-    jdc-light: "#ffffff"
+    grey: "#666666"
+    dark: "#222222"
+    light: "#ffffff"
 
     # Light variations for backgrounds
-    jdc-blue-light: "#ddeaf1"
-    jdc-grey-light: "#f5f5f5"
+    blue-light: "#ddeaf1"
+    grey-light: "#f5f5f5"
 
   # Semantic color assignments
-  primary: jdc-blue
-  secondary: jdc-navy
-  success: jdc-green
-  warning: jdc-yellow
-  danger: jdc-red
+  primary: blue
+  secondary: navy
+  success: green
+  warning: yellow
+  danger: red
 
   # Document structure colors
-  foreground: jdc-dark
-  background: jdc-light
+  foreground: dark
+  background: light
 
   # Interactive elements
-  link: jdc-blue
+  link: blue
 
 logo:
   # Primary JDC horizontal logo
   medium: "_extensions/jdc/jdc_logo_horizontal.svg"
   # Alternative JDC logo
-  small: "imgs/JDC-logo-horizontal-CMYK.png"
+  small: "_extensions/jdc/jdc_logo_horizontal_white.png"
 
 typography:
   # Google Fonts integration

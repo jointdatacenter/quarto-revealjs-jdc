@@ -2,6 +2,8 @@
 
 A [Quarto](https://quarto.org/) extension for branded presentations.
 
+The repository is based on the [UNHCR Quarto RevealJS template](https://github.com/unhcr-dataviz/quarto-revealjs-unhcr/).
+
 ## Installing
 
 To start a new presentation:
