@@ -1,4 +1,4 @@
-title: JDC Presentation Template
+title: JDC Templates
 author: JDC
 version: 1.0.0
 quarto-required: ">=1.5.0"
@@ -24,3 +24,23 @@ contributes:
       multiplex: false
       controls: true
       navigation-mode: vertical
+
+    html:
+      # Theme integrates with Quarto brand system
+      theme: [default, html.scss]
+      logo: jdc_logo_horizontal.svg
+
+      # Table of contents
+      toc: true
+      toc-depth: 3
+      toc-location: left
+
+      # Code and syntax highlighting
+      code-fold: false
+      code-tools: true
+      code-copy: true
+      highlight-style: github
+
+      # Document settings
+      number-sections: true
+      link-external-newwindow: true
